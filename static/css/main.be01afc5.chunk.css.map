@@ -1,0 +1,1 @@
+{"version":3,"sources":["Overlay.module.css"],"names":[],"mappings":"AAAA,wBACI,iBAAkB,CAClB,UAAW,CACX,WAAY,CACZ,qBAAuB,CACvB,UAAY,CACZ,UACJ","file":"main.be01afc5.chunk.css","sourcesContent":[".Overlay {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: black;\r\n    opacity: 0.7;\r\n    z-index: -1;\r\n}"]}
