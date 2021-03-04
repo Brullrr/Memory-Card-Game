@@ -1,0 +1,2 @@
+export const TURN_OFF_OVERLAY = 'TURN_OFF_OVERLAY';
+export const TURN_ON_OVERLAY = 'TURN_ON_OVERLAY';
