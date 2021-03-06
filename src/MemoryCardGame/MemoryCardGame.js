@@ -2,20 +2,33 @@ import React, { Fragment } from 'react';
 import Overlay from './reusables/Overlay/Overlay';
 import { connect } from 'react-redux';
 import * as actionTypes from '../store/actionTypes/actionTypes';
+import FirstTime from './components/FirstTimeCompenent/FirstTime';
  
 const MemoryCardGame = (props) => {
 
-    setTimeout(() => {
-        props.turnOffOverlay()
-    }, 3000)
+    let overlay = null
+    let firstTime = null
+    
+    if(props.isUserFirstVisit){
+        overlay = <Overlay />
+        firstTime = <FirstTime />
+        setTimeout(() => {
+            props.turnOffOverlay();
+            props.turnOffFirstVisit();
+        }, 3000);
+    }
 
     return ( 
     <Fragment>
-        <Overlay />
+        {overlay}
+        {firstTime}
         <div>
             <p>a characcter</p>
             <p>speech bubble</p>
             <p>a world map in the background</p>
+            <p>Components that need to be added</p>
+            <p>a component for each "level"</p>
+            <p></p>
         </div>
     </Fragment> 
     )
@@ -24,13 +37,15 @@ const MemoryCardGame = (props) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        turnOffOverlay: () => dispatch({type: actionTypes.TURN_OFF_OVERLAY})
+        turnOffOverlay: () => dispatch({type: actionTypes.TURN_OFF_OVERLAY}),
+        turnOffFirstVisit: () => dispatch({type: actionTypes.TURN_OFF_FIRST_VISIT})
     }
 }
 
 const mapStateToProps = state => {
     return {
-        isOverlayOn: state.vrlyrdcr.isOverlayOn
+        isOverlayOn: state.vrlyrdcr.isOverlayOn,
+        isUserFirstVisit: state.frsttmvstrdcr.isUserFirstVisit
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(MemoryCardGame);

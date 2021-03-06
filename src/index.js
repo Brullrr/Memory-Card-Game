@@ -5,7 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+
 import overlayReducer from './store/reducers/overlayReducer';
+import firstVisitReducer from './store/reducers/firstVisitReducer';
 
 
 const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : {}
@@ -13,6 +15,7 @@ const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStor
 const rootReducer = combineReducers(
   {
     vrlyrdcr: overlayReducer,
+    frsttmvstrdcr: firstVisitReducer
   }
 )
 const store = createStore(rootReducer, persistedState)
