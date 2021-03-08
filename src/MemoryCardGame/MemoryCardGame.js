@@ -15,7 +15,7 @@ const MemoryCardGame = (props) => {
         setTimeout(() => {
             props.turnOffOverlay();
             props.turnOffFirstVisit();
-        }, 3000);
+        }, 300000);
     }
 
     return ( 
@@ -23,12 +23,13 @@ const MemoryCardGame = (props) => {
         {overlay}
         {firstTime}
         <div>
-            <p>a characcter</p>
-            <p>speech bubble</p>
             <p>a world map in the background</p>
             <p>Components that need to be added</p>
             <p>a component for each "level"</p>
-            <p></p>
+            <p>I have 0 direction of where this project is headed</p>
+            <p>Addd changing text to speech in steead of making font smaller</p>
+            <p>list characters</p>
+            <p>FIGURE OUT HOW TO FIX TIMER IN STATE</p>
         </div>
     </Fragment> 
     )

@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 
 import overlayReducer from './store/reducers/overlayReducer';
 import firstVisitReducer from './store/reducers/firstVisitReducer';
+import instructionsReducer from './store/reducers/instructionsReducer';
 
 
 const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : {}
@@ -15,7 +16,8 @@ const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStor
 const rootReducer = combineReducers(
   {
     vrlyrdcr: overlayReducer,
-    frsttmvstrdcr: firstVisitReducer
+    frsttmvstrdcr: firstVisitReducer,
+    nstrctnsrdcr: instructionsReducer
   }
 )
 const store = createStore(rootReducer, persistedState)
