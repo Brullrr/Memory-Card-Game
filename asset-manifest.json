@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/Memory-Card-Game/static/css/main.ba6f0e66.chunk.css",
-    "main.js": "/Memory-Card-Game/static/js/main.5eb4ec4c.chunk.js",
-    "main.js.map": "/Memory-Card-Game/static/js/main.5eb4ec4c.chunk.js.map",
+    "main.css": "/Memory-Card-Game/static/css/main.f72534e3.chunk.css",
+    "main.js": "/Memory-Card-Game/static/js/main.102430eb.chunk.js",
+    "main.js.map": "/Memory-Card-Game/static/js/main.102430eb.chunk.js.map",
     "runtime-main.js": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js",
     "runtime-main.js.map": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js.map",
-    "static/js/2.c07ec819.chunk.js": "/Memory-Card-Game/static/js/2.c07ec819.chunk.js",
-    "static/js/2.c07ec819.chunk.js.map": "/Memory-Card-Game/static/js/2.c07ec819.chunk.js.map",
+    "static/js/2.d3b22e57.chunk.js": "/Memory-Card-Game/static/js/2.d3b22e57.chunk.js",
+    "static/js/2.d3b22e57.chunk.js.map": "/Memory-Card-Game/static/js/2.d3b22e57.chunk.js.map",
     "index.html": "/Memory-Card-Game/index.html",
-    "precache-manifest.98fd7acd86157cdebbcfd21e6ddf71d6.js": "/Memory-Card-Game/precache-manifest.98fd7acd86157cdebbcfd21e6ddf71d6.js",
+    "precache-manifest.b7ac46ae0f18b37a1a7d027456e994ae.js": "/Memory-Card-Game/precache-manifest.b7ac46ae0f18b37a1a7d027456e994ae.js",
     "service-worker.js": "/Memory-Card-Game/service-worker.js",
-    "static/css/main.ba6f0e66.chunk.css.map": "/Memory-Card-Game/static/css/main.ba6f0e66.chunk.css.map",
-    "static/js/2.c07ec819.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.c07ec819.chunk.js.LICENSE.txt",
-    "static/media/Imp.png": "/Memory-Card-Game/static/media/Imp.c33eec6e.png"
+    "static/css/main.f72534e3.chunk.css.map": "/Memory-Card-Game/static/css/main.f72534e3.chunk.css.map",
+    "static/js/2.d3b22e57.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.d3b22e57.chunk.js.LICENSE.txt",
+    "static/media/Imp.png": "/Memory-Card-Game/static/media/Imp.c33eec6e.png",
+    "static/media/FirstTime.module.css": "/Memory-Card-Game/static/media/SpeechBubble.db9985df.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e2a5dfbd.js",
-    "static/js/2.c07ec819.chunk.js",
-    "static/css/main.ba6f0e66.chunk.css",
-    "static/js/main.5eb4ec4c.chunk.js"
+    "static/js/2.d3b22e57.chunk.js",
+    "static/css/main.f72534e3.chunk.css",
+    "static/js/main.102430eb.chunk.js"
   ]
 }
