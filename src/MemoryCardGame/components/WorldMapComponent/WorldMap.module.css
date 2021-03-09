@@ -1,0 +1,10 @@
+.WorldMap {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.WorldMap div {
+    width: 100%;
+    height: 50vh;
+    background-color: aqua;
+}

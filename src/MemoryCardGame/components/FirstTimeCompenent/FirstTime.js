@@ -6,53 +6,48 @@ import ImpImg from '../../reusables/Images/Imp.png'
 
 const FirstTime = (props) => {
     let instructionsArray = [
-        'Hello',
-        'Welcome to Stonehorn',
-        'Some BS story telling how to play the game'
+        'Yo, listen up',
+        'Here\'s a story',
+        'About a little guy',
+        'That lives in a blue world',
+        'And all day ',
+        'and all night',
+        'And everything he sees',
+        'is just blue',
+        'like him ',
+        'inside and outside',
+        'Blue his house',
+        'With a blue little window',
+        'And a blue corvette',
+        'And everything is blue',
+        'for him',
+        'And himself ',
+        'and everybody around',
+        'Cause he ain\'t got',
+        'nobody',
+        'to listen to',
+        'to listen to',
+        'IM BLUE',
+        'DA BA DEE DA BA DI',
+        'DA BA DEE DA BA DI',
+        'DA BA DEE DA BA DI',
+        'DA BA DEE DA BA DI',
+        'DA BA DEE DA BA DI',
+        'DA BA DEE DA BA DI',
+        'DA BA DEE DA BA DI',
+        'DA BA DEE DA BA DI',
     ]
 
-    // const [instructionsNum, setInstructionsNum] = useState({
-    //     instructionsNum: 0
-    // }) 
 
-
-    
-    // const timer = () => {
-    //         if(instructionsNum.instructionsNum >= instructionsArray.length){
-                
-    //             setInstructionsNum({
-    //                 instructionsNum: 0
-    //             })
-    //             stopInstructions();
-    //         } else {
-    //         setInstructionsNum({
-    //             instructionsNum: instructionsNum.instructionsNum + 1
-    //         })
-    //         }
-    // }
-
-    // const loopInstructions = setInterval(timer, 1500)
-
-    // const stopInstructions = () => {
-    //     clearInterval(loopInstructions)
-    // }
-
-
-    // const timer = () => {
-    //     if(props.instructionsNum >= instructionsArray.length) {
-            
-    //     } else {
-    //         props.incrementInstructionNumber();
-            
-    //     }
-    // }
-    
-    // setInterval(timer, 1500)
     if(props.instructionsNum === 0) {
-        props.incrementInstructionNumber();
+        console.log("Test is running")
+        let loopInstructions = setInterval( () => { props.incrementInstructionNumber() },1350)
+
+        setTimeout(()=> {
+            clearInterval(loopInstructions)
+        }, 35000)        
     }
 
-    console.log(props.instructionsNum)
 
     return (
         <Fragment>

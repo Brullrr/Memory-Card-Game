@@ -3,6 +3,7 @@ import Overlay from './reusables/Overlay/Overlay';
 import { connect } from 'react-redux';
 import * as actionTypes from '../store/actionTypes/actionTypes';
 import FirstTime from './components/FirstTimeCompenent/FirstTime';
+import WorldMap from './components/WorldMapComponent/WorldMap';
  
 const MemoryCardGame = (props) => {
 
@@ -15,7 +16,7 @@ const MemoryCardGame = (props) => {
         setTimeout(() => {
             props.turnOffOverlay();
             props.turnOffFirstVisit();
-        }, 300000);
+        }, 30000);
     }
 
     return ( 
@@ -23,14 +24,16 @@ const MemoryCardGame = (props) => {
         {overlay}
         {firstTime}
         <div>
-            <p>a world map in the background</p>
+            <p>a world map with four major clickable sections</p>
+            <p>each section is set to clickable after completing the prior stage</p>
+            <p>LOL I AM ROTFL</p>
             <p>Components that need to be added</p>
             <p>a component for each "level"</p>
             <p>I have 0 direction of where this project is headed</p>
-            <p>Addd changing text to speech in steead of making font smaller</p>
             <p>list characters</p>
-            <p>FIGURE OUT HOW TO FIX TIMER IN STATE</p>
+            <p>Should i use routing (browser router or Nextjs) for different stages or just a popup????</p>
         </div>
+        <WorldMap />
     </Fragment> 
     )
 }
