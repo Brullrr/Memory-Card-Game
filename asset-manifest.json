@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Memory-Card-Game/static/css/main.f72534e3.chunk.css",
-    "main.js": "/Memory-Card-Game/static/js/main.102430eb.chunk.js",
-    "main.js.map": "/Memory-Card-Game/static/js/main.102430eb.chunk.js.map",
+    "main.css": "/Memory-Card-Game/static/css/main.b1c47a75.chunk.css",
+    "main.js": "/Memory-Card-Game/static/js/main.e8c79293.chunk.js",
+    "main.js.map": "/Memory-Card-Game/static/js/main.e8c79293.chunk.js.map",
     "runtime-main.js": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js",
     "runtime-main.js.map": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js.map",
-    "static/js/2.d3b22e57.chunk.js": "/Memory-Card-Game/static/js/2.d3b22e57.chunk.js",
-    "static/js/2.d3b22e57.chunk.js.map": "/Memory-Card-Game/static/js/2.d3b22e57.chunk.js.map",
+    "static/js/2.97bdf344.chunk.js": "/Memory-Card-Game/static/js/2.97bdf344.chunk.js",
+    "static/js/2.97bdf344.chunk.js.map": "/Memory-Card-Game/static/js/2.97bdf344.chunk.js.map",
     "index.html": "/Memory-Card-Game/index.html",
-    "precache-manifest.b7ac46ae0f18b37a1a7d027456e994ae.js": "/Memory-Card-Game/precache-manifest.b7ac46ae0f18b37a1a7d027456e994ae.js",
+    "precache-manifest.15638aebde91f44c30fac4c3e7f1066d.js": "/Memory-Card-Game/precache-manifest.15638aebde91f44c30fac4c3e7f1066d.js",
     "service-worker.js": "/Memory-Card-Game/service-worker.js",
-    "static/css/main.f72534e3.chunk.css.map": "/Memory-Card-Game/static/css/main.f72534e3.chunk.css.map",
-    "static/js/2.d3b22e57.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.d3b22e57.chunk.js.LICENSE.txt",
+    "static/css/main.b1c47a75.chunk.css.map": "/Memory-Card-Game/static/css/main.b1c47a75.chunk.css.map",
+    "static/js/2.97bdf344.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.97bdf344.chunk.js.LICENSE.txt",
     "static/media/Imp.png": "/Memory-Card-Game/static/media/Imp.c33eec6e.png",
     "static/media/FirstTime.module.css": "/Memory-Card-Game/static/media/SpeechBubble.db9985df.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e2a5dfbd.js",
-    "static/js/2.d3b22e57.chunk.js",
-    "static/css/main.f72534e3.chunk.css",
-    "static/js/main.102430eb.chunk.js"
+    "static/js/2.97bdf344.chunk.js",
+    "static/css/main.b1c47a75.chunk.css",
+    "static/js/main.e8c79293.chunk.js"
   ]
 }
