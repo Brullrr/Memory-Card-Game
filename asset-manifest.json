@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Memory-Card-Game/static/css/main.0c43c02c.chunk.css",
-    "main.js": "/Memory-Card-Game/static/js/main.05726ae8.chunk.js",
-    "main.js.map": "/Memory-Card-Game/static/js/main.05726ae8.chunk.js.map",
+    "main.css": "/Memory-Card-Game/static/css/main.552d6bb2.chunk.css",
+    "main.js": "/Memory-Card-Game/static/js/main.718c1a24.chunk.js",
+    "main.js.map": "/Memory-Card-Game/static/js/main.718c1a24.chunk.js.map",
     "runtime-main.js": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js",
     "runtime-main.js.map": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js.map",
     "static/js/2.6b3dc560.chunk.js": "/Memory-Card-Game/static/js/2.6b3dc560.chunk.js",
     "static/js/2.6b3dc560.chunk.js.map": "/Memory-Card-Game/static/js/2.6b3dc560.chunk.js.map",
     "index.html": "/Memory-Card-Game/index.html",
-    "precache-manifest.7fd47e5aa770d5ade7ea2895f9d2f61b.js": "/Memory-Card-Game/precache-manifest.7fd47e5aa770d5ade7ea2895f9d2f61b.js",
+    "precache-manifest.312a4f927f4cf171e8236a286742bf11.js": "/Memory-Card-Game/precache-manifest.312a4f927f4cf171e8236a286742bf11.js",
     "service-worker.js": "/Memory-Card-Game/service-worker.js",
-    "static/css/main.0c43c02c.chunk.css.map": "/Memory-Card-Game/static/css/main.0c43c02c.chunk.css.map",
+    "static/css/main.552d6bb2.chunk.css.map": "/Memory-Card-Game/static/css/main.552d6bb2.chunk.css.map",
     "static/js/2.6b3dc560.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.6b3dc560.chunk.js.LICENSE.txt",
     "static/media/Imp.png": "/Memory-Card-Game/static/media/Imp.c33eec6e.png",
     "static/media/FirstTime.module.css": "/Memory-Card-Game/static/media/SpeechBubble.db9985df.png",
-    "static/media/WorldMap.module.css": "/Memory-Card-Game/static/media/StageTwo.a251c957.png"
+    "static/media/WorldMap.module.css": "/Memory-Card-Game/static/media/StageTwo.b9fcffbe.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e2a5dfbd.js",
     "static/js/2.6b3dc560.chunk.js",
-    "static/css/main.0c43c02c.chunk.css",
-    "static/js/main.05726ae8.chunk.js"
+    "static/css/main.552d6bb2.chunk.css",
+    "static/js/main.718c1a24.chunk.js"
   ]
 }

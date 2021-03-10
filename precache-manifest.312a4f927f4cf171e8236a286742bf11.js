@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6185475632aa734546aea17e432c9ddf",
+    "revision": "0cfa88533d3f4818f2223778dd3a35f2",
     "url": "/Memory-Card-Game/index.html"
   },
   {
-    "revision": "b1d9b18367340a04ecbf",
-    "url": "/Memory-Card-Game/static/css/main.0c43c02c.chunk.css"
+    "revision": "85a03951c72ec1afee6f",
+    "url": "/Memory-Card-Game/static/css/main.552d6bb2.chunk.css"
   },
   {
     "revision": "2162742c859bc7c5f236",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Memory-Card-Game/static/js/2.6b3dc560.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b1d9b18367340a04ecbf",
-    "url": "/Memory-Card-Game/static/js/main.05726ae8.chunk.js"
+    "revision": "85a03951c72ec1afee6f",
+    "url": "/Memory-Card-Game/static/js/main.718c1a24.chunk.js"
   },
   {
     "revision": "31b99750f4b93866250e",
@@ -32,19 +32,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Memory-Card-Game/static/media/SpeechBubble.db9985df.png"
   },
   {
-    "revision": "02924460a7cd202339a3df1d0a0cfd31",
-    "url": "/Memory-Card-Game/static/media/StageFour.02924460.png"
+    "revision": "be2a25cc041dabf26c058d554f36e408",
+    "url": "/Memory-Card-Game/static/media/StageFour.be2a25cc.png"
   },
   {
     "revision": "3936fbe6bab3d0bebedbbc8346595bab",
     "url": "/Memory-Card-Game/static/media/StageOne.3936fbe6.png"
   },
   {
-    "revision": "22609e2a41ad977ebedb6a814105aea1",
-    "url": "/Memory-Card-Game/static/media/StageThree.22609e2a.png"
+    "revision": "98c5858443c0a651d4250f38cae9dba1",
+    "url": "/Memory-Card-Game/static/media/StageThree.98c58584.png"
   },
   {
-    "revision": "a251c95730b83fad503fb52867154f8b",
-    "url": "/Memory-Card-Game/static/media/StageTwo.a251c957.png"
+    "revision": "b9fcffbecc8c1de7d5fc039339ae7c14",
+    "url": "/Memory-Card-Game/static/media/StageTwo.b9fcffbe.png"
   }
 ]);
