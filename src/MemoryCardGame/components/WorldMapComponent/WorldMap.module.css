@@ -12,26 +12,35 @@
 .StageOne {
     background-image: url('../../reusables/Images/StageOne.png');
     background-size: 100% 100%;
+    cursor: pointer;
 }
 .StageTwo {
     background-image: url('../../reusables/Images/StageTwo.png');
     background-size: 100% 100%;
+    cursor: pointer;
 }
 .StageThree {
     background-image: url('../../reusables/Images/StageThree.png');
     background-size: 100% 100%;
+    cursor: pointer;
 }
 .StageFour {
     background-image: url('../../reusables/Images/StageFour.png');
     background-size: 100% 100%;
+    cursor: pointer;
 }
 
 
 
 .StageOne:hover {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../../reusables/Images/StageOne.png');
-    background-size: 100% 100%;
+    transform: scale(1.3); 
+}
+.StageTwo:hover {
+    transform: scale(1.3); 
+}
+.StageThree:hover {
+    transform: scale(1.3); 
+}
+.StageFour:hover {
+    transform: scale(1.3); 
 }

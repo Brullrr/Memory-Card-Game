@@ -9,10 +9,12 @@ const MemoryCardGame = (props) => {
 
     let overlay = null
     let firstTime = null
+    let worldMap = <WorldMap />
     
     if(props.isUserFirstVisit){
         overlay = <Overlay />
         firstTime = <FirstTime />
+        worldMap = null
         setTimeout(() => {
             props.turnOffOverlay();
             props.turnOffFirstVisit();
@@ -23,8 +25,7 @@ const MemoryCardGame = (props) => {
     <Fragment>
         {overlay}
         {firstTime}
-        
-        <WorldMap />
+        {worldMap}
     </Fragment> 
     )
 }
