@@ -1,12 +1,16 @@
 .WorldMap {
+    position: absolute;
     display: grid;
     grid-template-columns: 50% 50%;
+    top: 0%;
+    left: 0%;
 }
 
 .WorldMap div {
-    width: 100%;
+    width: 50vw;
     height: 50vh;
     transition: ease 3.0s;
+    
 }
 
 .StageOne {

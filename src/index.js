@@ -5,10 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
 import overlayReducer from './store/reducers/overlayReducer';
 import firstVisitReducer from './store/reducers/firstVisitReducer';
 import instructionsReducer from './store/reducers/instructionsReducer';
+import stageOneReducer from './store/reducers/stageOneReducer'
 
 
 const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : {}
@@ -17,7 +19,8 @@ const rootReducer = combineReducers(
   {
     vrlyrdcr: overlayReducer,
     frsttmvstrdcr: firstVisitReducer,
-    nstrctnsrdcr: instructionsReducer
+    nstrctnsrdcr: instructionsReducer,
+    stgnrdcr: stageOneReducer
   }
 )
 const store = createStore(rootReducer, persistedState)
@@ -28,9 +31,13 @@ store.subscribe(()=>{
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={ store }>
-      <App />
-    </Provider>
+    
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Provider store={ store }>
+        <App />
+      </Provider>
+    </BrowserRouter>
+    
     
   </React.StrictMode>,
   document.getElementById('root')

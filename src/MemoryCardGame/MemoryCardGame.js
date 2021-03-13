@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import * as actionTypes from '../store/actionTypes/actionTypes';
 import FirstTime from './components/FirstTimeCompenent/FirstTime';
 import WorldMap from './components/WorldMapComponent/WorldMap';
+import { HashRouter, Route } from 'react-router-dom';
+import StageOne from './components/Stages/StageOneComponent/StageOne';
  
 const MemoryCardGame = (props) => {
 
@@ -23,9 +25,20 @@ const MemoryCardGame = (props) => {
 
     return ( 
     <Fragment>
-        {overlay}
-        {firstTime}
-        {worldMap}
+        <HashRouter>
+            <Route path='/' exact render={() => {
+                return (<div>
+                    {overlay}
+                    {firstTime}
+                    {worldMap}
+                </div>)
+            } } />
+
+            <Route path='/StageOne' exact render={ () => <StageOne />} />
+            <Route path='/StageTwo' exact render={ () => <p>Stage2</p>} />
+            <Route path='/StageThree' exact render={ () => <p>Stage3</p>} />
+            <Route path='/StageFour' exact render={ () => <p>Stage4</p>} />
+        </HashRouter>
     </Fragment> 
     )
 }

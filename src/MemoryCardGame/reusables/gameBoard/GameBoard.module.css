@@ -1,0 +1,21 @@
+.GameBoard {
+    background-color: rgba(240, 248, 255, 0.4);
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    box-shadow: 1px 5px 10px 1px;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.Card {
+    height: 20vh;
+    border-radius: 8px;
+}
+
+.Image {
+    height: 100%;
+    width: 100%;
+}

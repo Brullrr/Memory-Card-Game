@@ -1,18 +1,20 @@
 import classes from './WorldMap.module.css';
 import React, { Fragment} from 'react';
+import {  Link } from 'react-router-dom';
 
 
 const WorldMap = () => {
     return (
         <Fragment>
             <div className={classes.WorldMap}>
-                <div className={classes.StageOne}>Meet the tttown?</div>
+                < Link to="/StageOne" ><div className={classes.StageOne}>Meet the tttown?</div></Link>
 
-                <div className={classes.StageTwo}>learn The negihbors</div>
+                < Link to="/StageTwo" ><div className={classes.StageTwo}>learn The negihbors</div></Link>
 
-                <div className={classes.StageThree}>Kill the invaders</div>
+                < Link to="/StageThree" ><div className={classes.StageThree}>Kill the invaders</div></Link>
 
-                <div className={classes.StageFour}>Become the invading aliens
+                < Link to="/StageFour" >
+                    <div className={classes.StageFour}>Become the invading aliens
                     <p>a world map with four major clickable sections</p>
                     <p>each section is set to clickable after completing the prior stage</p>
                     <p>LOL I AM ROTFL</p>
@@ -21,7 +23,8 @@ const WorldMap = () => {
                     <p>I have 0 direction of where this project is headed</p>
                     <p>list characters</p>
                     <p>Should i use routing (browser router or Nextjs) for different stages or just a popup????</p>
-                </div>
+                    </div>
+                </Link>
             </div>
         </Fragment>
     )
