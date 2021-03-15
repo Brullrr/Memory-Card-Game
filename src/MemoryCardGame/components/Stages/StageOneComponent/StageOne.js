@@ -17,7 +17,10 @@ import draftfishPurple from '../../../reusables/Images/StageOne/DraftfishPurple.
 import draftfishRed from '../../../reusables/Images/StageOne/DraftfishRed.png';
 import draftfishTeal from '../../../reusables/Images/StageOne/DraftfishTeal.png';
 import draftfishYellow from '../../../reusables/Images/StageOne/DraftfishYellow.png';
-
+import frog from '../../../reusables/Images/StageOne/Frog.png';
+import speechBubble from '../../../reusables/Images/SpeechBubble.png';
+import { Link } from 'react-router-dom';
+ 
 
 const StageOne = (props) => {
 
@@ -51,13 +54,14 @@ const StageOne = (props) => {
     return (
         <div className={classes.StageOneBody}>
             <div>
-                <div>Char</div>
-                <div>SpeechBubble</div>
+                <div className={classes.FrogHolder}>
+                    <Link to='/'>
+                        <img className={classes.Frog} src={frog}></img>
+                    </Link>
+                </div>
+                <div className={classes.SpeechBubble}><img src={ speechBubble}></img><p>Help me catch each fish!<br></br>Or... click me to go home.</p></div>
             </div>
             <GameBoard cards={cardsArray} clicked={addCardToState} />
-            <div> A winning screen </div>
-            <div>A losing screen</div>
-            <p>Button for going home</p>
         </div>
     )
 }

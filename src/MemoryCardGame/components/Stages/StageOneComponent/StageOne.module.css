@@ -7,3 +7,39 @@
     top: 0%;
     left: 0%;
 }
+
+
+.FrogHolder {
+    display: inline-block;
+    width: 20vw;
+    height: 50vh;
+}
+
+.Frog {
+    height: 100%;
+    width: 100%;
+}
+
+
+.SpeechBubble {
+    display: inline-block;
+    width: 60vw;
+    height: 25vh;
+    margin: 0px 0px 0px 0px;
+    vertical-align: top;
+}
+
+.SpeechBubble p {
+    position: absolute;
+    left: 40%;
+    top: 2%;
+    font-size: 30px;
+
+}
+.SpeechBubble img {
+    position: absolute;
+    top: 0%;
+    width: 60vw;
+    height: 25vh;
+    transform: scaleX(-1);
+}

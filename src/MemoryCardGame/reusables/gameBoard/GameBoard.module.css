@@ -1,5 +1,5 @@
 .GameBoard {
-    background-color: rgba(240, 248, 255, 0.4);
+    background-color: rgba(113, 153, 189, 0.4);
     display: grid;
     grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw;
     position: absolute;
@@ -13,6 +13,7 @@
 .Card {
     height: 20vh;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .Image {
