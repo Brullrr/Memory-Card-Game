@@ -5,17 +5,21 @@ const GameBoard = (props) => {
 
     let cardsArray = [...props.cards];
 
+    let gameboardClass = props.Lost ? classes.GameBoardLose : classes.GameBoard
+
     return (
-        <div className={classes.GameBoard}>
+        <div className={gameboardClass}>
             {cardsArray.map((ele) =>{
-                console.log(ele)
-        return (<div 
-            className={classes.Card}
-             key={ele} 
-             onClick={() => {
-            props.clicked(ele)
-        }}><img alt='fish' className={classes.Image} src={ele}></img></div>)
-    })}
+                return (<div 
+                            className={classes.Card}
+                            key={ele} 
+                            onClick={() => {
+                            props.clicked(ele)
+                        }}>
+                            <img alt='fish' className={classes.Image} src={ele}></img>
+                        </div>  
+                )
+            })}
         </div>
     )
 }

@@ -29,27 +29,33 @@ const StageOne = (props) => {
                         draftfishOrange, draftfishPurple, draftfishRed, draftfishTeal, draftfishYellow
     ]
     
-        cardsArray = shuffle(cardsArray)
-     
+    cardsArray = shuffle(cardsArray)
     
-    const activateLAsers = () => {
-        alert(props.isStageOneComplete);
+    let frogPhrase = props.isStageOneComplete ? 'Thank you!' : 'Help me catch each fish!'
+    let stageOneLost = props.isStageOneLost ? true : false
+    
+    const lose = () => {
         props.clearClickedOn();
-        
+        props.stageOneLost();
+        setTimeout(props.stageOneLostRevert, 1500)
     }
 
     const winCondition = () => {
-        alert('YOU WIN');
         props.clearClickedOn();
+        props.stageOneComplete();
         
     }
 
     let addCardToState = (ele) => {
-        props.clickedOnArray.every((e) => e !== ele) ? props.clickedOnArray.length === cardsArray.length-1 ? winCondition() : props.clickedOn(ele) : activateLAsers();
+        props.clickedOnArray.every((e) => e !== ele) ? props.clickedOnArray.length === cardsArray.length-1 ? winCondition() : props.clickedOn(ele) : lose();
 
     }
 
+    let gameboard = <GameBoard cards={cardsArray} clicked={addCardToState} Lost={stageOneLost} />;
 
+    if(props.isStageOneComplete){
+        gameboard = <div className={classes.Victory}>Well done! <br /> The village will not starve!</div>
+    }
 
     return (
         <div className={classes.StageOneBody}>
@@ -59,9 +65,9 @@ const StageOne = (props) => {
                         <img className={classes.Frog} src={frog}></img>
                     </Link>
                 </div>
-                <div className={classes.SpeechBubble}><img src={ speechBubble}></img><p>Help me catch each fish!<br></br>Or... click me to go home.</p></div>
+                <div className={classes.SpeechBubble}><img src={ speechBubble}></img><p>{frogPhrase}<br></br>Click me to go home.</p></div>
             </div>
-            <GameBoard cards={cardsArray} clicked={addCardToState} />
+            {gameboard}
         </div>
     )
 }
@@ -69,7 +75,8 @@ const StageOne = (props) => {
 const mapStateToProps = state => {
     return {
         isStageOneComplete: state.stgnrdcr.isStageOneComplete,
-        clickedOnArray: state.stgnrdcr.clickedOn
+        clickedOnArray: state.stgnrdcr.clickedOn,
+        isStageOneLost: state.stgnrdcr.stageOneLost
     }
 
 }
@@ -77,7 +84,10 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         clickedOn: (ele) => dispatch({type: actionTypes.STAGE_ONE_CLICKED_ON, clickedCard: ele}),
-        clearClickedOn: () => dispatch({type: actionTypes.STAGE_ONE_CLEAR_CLICKED_ON})
+        clearClickedOn: () => dispatch({type: actionTypes.STAGE_ONE_CLEAR_CLICKED_ON}),
+        stageOneComplete: () => dispatch({type: actionTypes.STAGE_ONE_COMPLETED}),
+        stageOneLost: () => dispatch({type: actionTypes.STAGE_ONE_LOST}),
+        stageOneLostRevert: () => dispatch({type: actionTypes.STAGE_ONE_REVERT_LOST})
     }
 }
 

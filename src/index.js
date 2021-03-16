@@ -11,6 +11,7 @@ import overlayReducer from './store/reducers/overlayReducer';
 import firstVisitReducer from './store/reducers/firstVisitReducer';
 import instructionsReducer from './store/reducers/instructionsReducer';
 import stageOneReducer from './store/reducers/stageOneReducer'
+import stageTwoReducer from './store/reducers/stageTwoReducer';
 
 
 const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : {}
@@ -20,7 +21,8 @@ const rootReducer = combineReducers(
     vrlyrdcr: overlayReducer,
     frsttmvstrdcr: firstVisitReducer,
     nstrctnsrdcr: instructionsReducer,
-    stgnrdcr: stageOneReducer
+    stgnrdcr: stageOneReducer,
+    stgtwrdcr: stageTwoReducer
   }
 )
 const store = createStore(rootReducer, persistedState)

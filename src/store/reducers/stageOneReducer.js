@@ -3,7 +3,8 @@ import * as actionTypes from '../actionTypes/actionTypes';
 
 const initialState = {
     isStageOneComplete: false,
-    clickedOn: []
+    clickedOn: [],
+    stageOneLost: false
 };
 
 const stageOnereducer = (state = initialState, action) => {
@@ -24,6 +25,28 @@ const stageOnereducer = (state = initialState, action) => {
             clickedOn: []
         }
     }
+
+    if(action.type === actionTypes.STAGE_ONE_COMPLETED){
+        return {
+            ...state,
+            isStageOneComplete: true
+        }
+    }
+
+    if(action.type === actionTypes.STAGE_ONE_LOST){
+        return {
+            ...state,
+            stageOneLost: true
+        }
+    }
+
+    if(action.type === actionTypes.STAGE_ONE_REVERT_LOST){
+        return {
+            ...state,
+            stageOneLost: false
+        }
+    }
+
 
     return state
 };

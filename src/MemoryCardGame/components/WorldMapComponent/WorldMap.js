@@ -1,28 +1,42 @@
 import classes from './WorldMap.module.css';
 import React, { Fragment} from 'react';
 import {  Link } from 'react-router-dom';
+import frog from '../../reusables/Images/StageOne/Frog.png'
+import { connect } from 'react-redux';
 
 
-const WorldMap = () => {
+const WorldMap = (props) => {
+
+
+
+    let stageOneWords = props.isStageOneComplete ? <div className={classes.StageOneWords}>
+                            <p>Well done!</p>
+                            <p>Enough fish have been collected.</p>
+                        </div> :
+                        <div className={classes.StageOneWords}>
+                            <p>New Stage!</p>
+                            <p>Help the frog collect fish for the village.</p>
+                         </div>
+
+    let stageOne = <div className={classes.StageOne}>
+                        <div className={classes.Frog}>
+                            <img src={frog}></img>
+                        </div>
+                        {stageOneWords}
+                    </div>
+
+
     return (
         <Fragment>
             <div className={classes.WorldMap}>
-                < Link to="/StageOne" ><div className={classes.StageOne}>Meet the tttown?</div></Link>
+                < Link to="/StageOne" style={{textDecoration: 'none'}} >{stageOne}</Link>
 
-                < Link to="/StageTwo" ><div className={classes.StageTwo}>learn The negihbors</div></Link>
+                < Link to="/StageTwo" style={{textDecoration: 'none'}} ><div className={classes.StageTwo}>learn The negihbors</div></Link>
 
-                < Link to="/StageThree" ><div className={classes.StageThree}>Kill the invaders</div></Link>
+                < Link to="/StageThree" style={{textDecoration: 'none'}}><div className={classes.StageThree}>Kill the invaders</div></Link>
 
-                < Link to="/StageFour" >
+                < Link to="/StageFour" style={{textDecoration: 'none'}}>
                     <div className={classes.StageFour}>Become the invading aliens
-                    <p>a world map with four major clickable sections</p>
-                    <p>each section is set to clickable after completing the prior stage</p>
-                    <p>LOL I AM ROTFL</p>
-                    <p>Components that need to be added</p>
-                    <p>a component for each "level"</p>
-                    <p>I have 0 direction of where this project is headed</p>
-                    <p>list characters</p>
-                    <p>Should i use routing (browser router or Nextjs) for different stages or just a popup????</p>
                     </div>
                 </Link>
             </div>
@@ -30,4 +44,11 @@ const WorldMap = () => {
     )
 }
 
-export default WorldMap;
+
+const mapStateToProps = state => {
+    return {
+        isStageOneComplete: state.stgnrdcr.isStageOneComplete
+    }
+}
+
+export default connect(mapStateToProps)(WorldMap);
