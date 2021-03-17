@@ -5,7 +5,7 @@ const GameBoard = (props) => {
 
     let cardsArray = [...props.cards];
 
-    let gameboardClass = props.Lost ? classes.GameBoardLose : classes.GameBoard
+    let gameboardClass = props.stage === '2' ? props.Lost ? classes.GameBoardStageTwoLose : classes.GameBoardStageTwo : props.Lost ? classes.GameBoardLose : classes.GameBoard
 
     return (
         <div className={gameboardClass}>

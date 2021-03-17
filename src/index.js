@@ -12,6 +12,7 @@ import firstVisitReducer from './store/reducers/firstVisitReducer';
 import instructionsReducer from './store/reducers/instructionsReducer';
 import stageOneReducer from './store/reducers/stageOneReducer'
 import stageTwoReducer from './store/reducers/stageTwoReducer';
+import stageThreeReducer from './store/reducers/stageThreeReducer';
 
 
 const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : {}
@@ -22,7 +23,8 @@ const rootReducer = combineReducers(
     frsttmvstrdcr: firstVisitReducer,
     nstrctnsrdcr: instructionsReducer,
     stgnrdcr: stageOneReducer,
-    stgtwrdcr: stageTwoReducer
+    stgtwrdcr: stageTwoReducer,
+    stgthrrdcr: stageThreeReducer
   }
 )
 const store = createStore(rootReducer, persistedState)

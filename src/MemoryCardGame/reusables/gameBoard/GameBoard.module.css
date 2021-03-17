@@ -25,6 +25,33 @@
     transition: all 1s ease-in-out;
 }
 
+.GameBoardStageTwo {
+    background-color: rgba(113, 153, 189, 0.4);
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    box-shadow: 1px 5px 10px 1px;
+    border-radius: 16px;
+    padding: 8px; 
+}
+
+.GameBoardStageTwoLose {
+    background-color: rgba(216, 46, 69, 0.63);
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw  10vw 10vw 10vw;
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    box-shadow: 1px 5px 10px 1px;
+    border-radius: 16px;
+    padding: 8px;
+    animation-name: shake;
+    animation-duration: 1s;
+    transition: all 1s ease-in-out;
+}
+
 .Card {
     height: 20vh;
     border-radius: 8px;

@@ -6,6 +6,8 @@ import FirstTime from './components/FirstTimeCompenent/FirstTime';
 import WorldMap from './components/WorldMapComponent/WorldMap';
 import { HashRouter, Route } from 'react-router-dom';
 import StageOne from './components/Stages/StageOneComponent/StageOne';
+import StageTwo from './components/Stages/StageTwoComponent/StageTwo';
+import StageThree from './components/Stages/StageThreeComponent/StageThree';
  
 const MemoryCardGame = (props) => {
 
@@ -35,8 +37,8 @@ const MemoryCardGame = (props) => {
             } } />
 
             <Route path='/StageOne' exact render={ () => <StageOne />} />
-            <Route path='/StageTwo' exact render={ () => <p>Stage2</p>} />
-            <Route path='/StageThree' exact render={ () => <p>Stage3</p>} />
+            <Route path='/StageTwo' exact render={ () => <StageTwo />} />
+            <Route path='/StageThree' exact render={ () => <StageThree />} />
             <Route path='/StageFour' exact render={ () => <p>Stage4</p>} />
         </HashRouter>
     </Fragment> 

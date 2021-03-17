@@ -51,7 +51,7 @@ const StageOne = (props) => {
 
     }
 
-    let gameboard = <GameBoard cards={cardsArray} clicked={addCardToState} Lost={stageOneLost} />;
+    let gameboard = <GameBoard cards={cardsArray} clicked={addCardToState} Lost={stageOneLost} stage='1' />;
 
     if(props.isStageOneComplete){
         gameboard = <div className={classes.Victory}>Well done! <br /> The village will not starve!</div>
@@ -62,10 +62,10 @@ const StageOne = (props) => {
             <div>
                 <div className={classes.FrogHolder}>
                     <Link to='/'>
-                        <img className={classes.Frog} src={frog}></img>
+                        <img className={classes.Frog} src={frog} alt='frog'></img>
                     </Link>
                 </div>
-                <div className={classes.SpeechBubble}><img src={ speechBubble}></img><p>{frogPhrase}<br></br>Click me to go home.</p></div>
+                <div className={classes.SpeechBubble}><img src={ speechBubble} alt='speechbub'></img><p>{frogPhrase}<br></br>Click me to go home.</p></div>
             </div>
             {gameboard}
         </div>
