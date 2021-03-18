@@ -15,9 +15,6 @@ const Overlay = (props) => {
             {overlay}
         </Fragment>
     )
-       
-    
-        
 }
 
 const mapStateToProps = state => {

@@ -1,0 +1,20 @@
+.GameLost {
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto;
+    z-index: 11;
+}
+
+
+.SunsetDino {
+
+    height: 50vh;
+    width: 30vw;
+    
+}
+
+.GameLost p {
+    background-color: white;
+    height: 50vh;
+    width: 30vw;
+}

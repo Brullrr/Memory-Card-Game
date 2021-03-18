@@ -9,9 +9,16 @@ import Squirrel from '../../reusables/Images/StageTwo/Squirrel.png'
 import Goose from '../../reusables/Images/StageTwo/Goose.png'
 import Dino from '../../reusables/Images/StageTwo/Dino.png'
 import { connect } from 'react-redux';
+import LossModal from '../../reusables/LossModal/LossModal';
+import Overlay from '../../reusables/Overlay/Overlay';
+import * as actionTypes from '../../../store/actionTypes/actionTypes';
+import GameLost from '../GameLost/GameLost';
 
 
 const WorldMap = (props) => {
+
+
+        
 
 
 
@@ -70,7 +77,7 @@ const WorldMap = (props) => {
                 break;
         
             default:
-                sourceCandidate = null
+                sourceCandidate = Imp
                 break;
         }
          let stageThreeWords = props.isStageThreeComplete ? <div className={classes.StageTwoWords}>
@@ -89,7 +96,25 @@ const WorldMap = (props) => {
                                 {stageThreeWords}
                             </div>
 
-        stageThree = props.isStageTwoComplete ? < Link to="/StageThree" style={{textDecoration: 'none'}}>{stageThree} </Link> : <div className={classes.StageThree}></div>
+        stageThree = props.isStageTwoComplete && props.candidate ? < Link to="/StageThree" style={{textDecoration: 'none'}}>{stageThree} </Link> : <div className={classes.StageThree}></div>
+        
+        let overlay = <Overlay />
+        let lossModal = null
+        if(!props.candidate && props.isStageTwoComplete && props.villsArray.length !== 0){
+            lossModal = <Link to='/StageTwo' > <LossModal /> </Link>
+            props.turnOnOverlay();
+        }
+        if(props.candidate) {
+            props.turnOffOverlay();
+        }
+
+        if(props.villsArray.length === 0) {
+            props.turnOnOverlay();
+            lossModal = <GameLost />
+            setTimeout(props.gameLostHandler, 5000)
+        }
+        
+
 
     return (
         <Fragment>
@@ -98,11 +123,14 @@ const WorldMap = (props) => {
 
                 {stageTwo}
                 {stageThree}
+                
 
                 < Link to="/StageFour" style={{textDecoration: 'none'}}>
                     <div className={classes.StageFour}><p>stuff</p>
                     </div>
                 </Link>
+                {lossModal}
+                {overlay}
             </div>
         </Fragment>
     )
@@ -114,8 +142,18 @@ const mapStateToProps = state => {
         isStageOneComplete: state.stgnrdcr.isStageOneComplete,
         isStageTwoComplete: state.stgtwrdcr.isStageTwoComplete,
         isStageThreeComplete: state.stgthrrdcr.isStageThreeComplete,
-        candidate: state.stgtwrdcr.candidate
+        candidate: state.stgtwrdcr.candidate,
+        villsArray: state.stgtwrdcr.vills
     }
 }
 
-export default connect(mapStateToProps)(WorldMap);
+const mapDispatchToProps = dispatch => {
+    return {
+        turnOffOverlay: () => dispatch({type: actionTypes.TURN_OFF_OVERLAY}),
+        turnOnOverlay: () => dispatch({type: actionTypes.TURN_ON_OVERLAY}),
+        gameLostHandler: () => dispatch({type: actionTypes.GAME_LOST})
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(WorldMap);

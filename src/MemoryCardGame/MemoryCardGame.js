@@ -22,7 +22,7 @@ const MemoryCardGame = (props) => {
         setTimeout(() => {
             props.turnOffOverlay();
             props.turnOffFirstVisit();
-        }, 30000);
+        }, 3000);
     }
 
     return ( 

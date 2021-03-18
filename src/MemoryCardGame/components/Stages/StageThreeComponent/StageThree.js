@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './StageThree.module.css';
 import * as actionTypes from '../../../../store/actionTypes/actionTypes';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Crit from '../../../reusables/Images/StageTwo/Crit.PNG'
 import Racoon from '../../../reusables/Images/StageTwo/Racoon.png'
 import Squirrel from '../../../reusables/Images/StageTwo/Squirrel.png'
@@ -11,6 +11,7 @@ import Dino from '../../../reusables/Images/StageTwo/Dino.png'
 import speechBubble from '../../../reusables/Images/SpeechBubble.png'
 import Gameboard from '../../../reusables/gameBoard/GameBoard';
 import shuffle from '../../../reusables/Shuffle/shuffle';
+import Timer from '../../../reusables/Timer/Timer';
 
 //IMOS
 import ImoWhite from '../../../reusables/Images/StageThree/ImoWhite.png';
@@ -38,6 +39,7 @@ import GoolLightPurple from '../../../reusables/Images/StageThree/GoolLightPurpl
 import GoolRed from '../../../reusables/Images/StageThree/GoolRed.png';
 import GoolLightBlue from '../../../reusables/Images/StageThree/GoolLightBlue.png';
 import GoolYellow from '../../../reusables/Images/StageThree/GoolYellow.png';
+import { Fragment } from 'react';
 
 
 const StageThree = (props) => {
@@ -107,18 +109,40 @@ const StageThree = (props) => {
                 attackPhrase = null
                 break;
         }
+        const history = useHistory();
+        const timerEnded = () => {
+            history.push('/')
+            console.log('TImer ended')
+            props.removeCandidate();
+        }
+
+        
+        
+
+
+
     return (
-        <div className={classes.StageThreeBody}>
-        <div>
-            <div className={classes.CandidateHolder}>
-                <Link to='/'>
-                    <img className={classes.CandidateHolder} src={sourceCandidate} alt='candidate'></img>
-                </Link>
+        <Fragment>
+            <div className={classes.StageThreeBody}>
+                <div>
+                
+                    <div className={classes.CandidateHolder}>
+                        <Link to='/'>
+                            <img className={classes.CandidateHolder} src={sourceCandidate} alt='candidate'></img>
+                        </Link>
+                    </div>
+                
+                    <div className={classes.SpeechBubble}>
+                        <img src={ speechBubble} alt='speechbub'></img>
+                        <p>{attackPhrase}</p>
+                    </div>
+                
+                </div>
+            {gameboard}
             </div>
-            <div className={classes.SpeechBubble}><img src={ speechBubble} alt='speechbub'></img><p>{attackPhrase}</p></div>
-        </div>
-        {gameboard}
-    </div>)
+            <Timer TimerEnded={timerEnded} />
+        </Fragment>
+        )
 }
 
 const mapStateToProps = state => {
@@ -136,7 +160,8 @@ const mapDispatchToProps = dispatch => {
         clearClickedOn: () => dispatch({type: actionTypes.STAGE_THREE_CLEAR_CLICKED_ON}),
         stageThreeComplete: () => dispatch({type: actionTypes.STAGE_THREE_COMPLETED}),
         stageThreeLost: () => dispatch({type: actionTypes.STAGE_THREE_LOST}),
-        stageThreeLostRevert: () => dispatch({type: actionTypes.STAGE_THREE_REVERT_LOST})
+        stageThreeLostRevert: () => dispatch({type: actionTypes.STAGE_THREE_REVERT_LOST}),
+        removeCandidate: () => dispatch({type: actionTypes.REMOVE_CANDIDATE})
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(StageThree)

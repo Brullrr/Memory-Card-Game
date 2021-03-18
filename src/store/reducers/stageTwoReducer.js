@@ -27,6 +27,19 @@ const initialState = {
 
 const stageTwoReducer = (state = initialState, action) => {
 
+    if(action.type === actionTypes.REMOVE_CANDIDATE){
+
+        let condition = (candidateObject) => {
+            return candidateObject.name !== state.candidate
+        }
+        
+        return {
+            ...state,
+            vills:  state.vills.filter(condition),
+            candidate: null
+        }
+    }
+
     if(action.type === actionTypes.STAGE_TWO_COMPLETED) {
         return {
             ...state,
