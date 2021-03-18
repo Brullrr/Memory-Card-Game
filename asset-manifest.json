@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Memory-Card-Game/static/css/main.97b4cf0d.chunk.css",
-    "main.js": "/Memory-Card-Game/static/js/main.0bd76ae5.chunk.js",
-    "main.js.map": "/Memory-Card-Game/static/js/main.0bd76ae5.chunk.js.map",
+    "main.css": "/Memory-Card-Game/static/css/main.20b449aa.chunk.css",
+    "main.js": "/Memory-Card-Game/static/js/main.f585fb86.chunk.js",
+    "main.js.map": "/Memory-Card-Game/static/js/main.f585fb86.chunk.js.map",
     "runtime-main.js": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js",
     "runtime-main.js.map": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js.map",
-    "static/js/2.ac63a9a5.chunk.js": "/Memory-Card-Game/static/js/2.ac63a9a5.chunk.js",
-    "static/js/2.ac63a9a5.chunk.js.map": "/Memory-Card-Game/static/js/2.ac63a9a5.chunk.js.map",
+    "static/js/2.59b376ee.chunk.js": "/Memory-Card-Game/static/js/2.59b376ee.chunk.js",
+    "static/js/2.59b376ee.chunk.js.map": "/Memory-Card-Game/static/js/2.59b376ee.chunk.js.map",
     "index.html": "/Memory-Card-Game/index.html",
-    "precache-manifest.f98b64b685bfaa4351571004014c0542.js": "/Memory-Card-Game/precache-manifest.f98b64b685bfaa4351571004014c0542.js",
+    "precache-manifest.9cb81de793362b8788b4b10318288401.js": "/Memory-Card-Game/precache-manifest.9cb81de793362b8788b4b10318288401.js",
     "service-worker.js": "/Memory-Card-Game/service-worker.js",
-    "static/css/main.97b4cf0d.chunk.css.map": "/Memory-Card-Game/static/css/main.97b4cf0d.chunk.css.map",
-    "static/js/2.ac63a9a5.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.ac63a9a5.chunk.js.LICENSE.txt",
+    "static/css/main.20b449aa.chunk.css.map": "/Memory-Card-Game/static/css/main.20b449aa.chunk.css.map",
+    "static/js/2.59b376ee.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.59b376ee.chunk.js.LICENSE.txt",
     "static/media/Crit.PNG": "/Memory-Card-Game/static/media/Crit.8665bc45.PNG",
     "static/media/Dino.png": "/Memory-Card-Game/static/media/Dino.4c67f2f7.png",
     "static/media/Draftfish.png": "/Memory-Card-Game/static/media/Draftfish.25e7967e.png",
@@ -59,12 +59,13 @@
     "static/media/WorldMap.module.css": "/Memory-Card-Game/static/media/StageFour.be2a25cc.png",
     "static/media/StageOne.module.css": "/Memory-Card-Game/static/media/StageOne.3936fbe6.png",
     "static/media/StageThree.module.css": "/Memory-Card-Game/static/media/StageThree.c86e6d0a.png",
-    "static/media/StageTwo.module.css": "/Memory-Card-Game/static/media/StageTwo.b9fcffbe.png"
+    "static/media/StageTwo.module.css": "/Memory-Card-Game/static/media/StageTwo.b9fcffbe.png",
+    "static/media/SunsetDino.png": "/Memory-Card-Game/static/media/SunsetDino.4831aaf8.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e2a5dfbd.js",
-    "static/js/2.ac63a9a5.chunk.js",
-    "static/css/main.97b4cf0d.chunk.css",
-    "static/js/main.0bd76ae5.chunk.js"
+    "static/js/2.59b376ee.chunk.js",
+    "static/css/main.20b449aa.chunk.css",
+    "static/js/main.f585fb86.chunk.js"
   ]
 }
