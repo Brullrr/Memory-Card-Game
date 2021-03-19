@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Memory-Card-Game/static/css/main.20b449aa.chunk.css",
-    "main.js": "/Memory-Card-Game/static/js/main.f585fb86.chunk.js",
-    "main.js.map": "/Memory-Card-Game/static/js/main.f585fb86.chunk.js.map",
+    "main.css": "/Memory-Card-Game/static/css/main.b114c530.chunk.css",
+    "main.js": "/Memory-Card-Game/static/js/main.7ad4f086.chunk.js",
+    "main.js.map": "/Memory-Card-Game/static/js/main.7ad4f086.chunk.js.map",
     "runtime-main.js": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js",
     "runtime-main.js.map": "/Memory-Card-Game/static/js/runtime-main.e2a5dfbd.js.map",
-    "static/js/2.59b376ee.chunk.js": "/Memory-Card-Game/static/js/2.59b376ee.chunk.js",
-    "static/js/2.59b376ee.chunk.js.map": "/Memory-Card-Game/static/js/2.59b376ee.chunk.js.map",
+    "static/js/2.1ca7d57e.chunk.js": "/Memory-Card-Game/static/js/2.1ca7d57e.chunk.js",
+    "static/js/2.1ca7d57e.chunk.js.map": "/Memory-Card-Game/static/js/2.1ca7d57e.chunk.js.map",
     "index.html": "/Memory-Card-Game/index.html",
-    "precache-manifest.9cb81de793362b8788b4b10318288401.js": "/Memory-Card-Game/precache-manifest.9cb81de793362b8788b4b10318288401.js",
+    "precache-manifest.e40f27a28eb7918c840cd4032d1c17f7.js": "/Memory-Card-Game/precache-manifest.e40f27a28eb7918c840cd4032d1c17f7.js",
     "service-worker.js": "/Memory-Card-Game/service-worker.js",
-    "static/css/main.20b449aa.chunk.css.map": "/Memory-Card-Game/static/css/main.20b449aa.chunk.css.map",
-    "static/js/2.59b376ee.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.59b376ee.chunk.js.LICENSE.txt",
+    "static/css/main.b114c530.chunk.css.map": "/Memory-Card-Game/static/css/main.b114c530.chunk.css.map",
+    "static/js/2.1ca7d57e.chunk.js.LICENSE.txt": "/Memory-Card-Game/static/js/2.1ca7d57e.chunk.js.LICENSE.txt",
     "static/media/Crit.PNG": "/Memory-Card-Game/static/media/Crit.8665bc45.PNG",
     "static/media/Dino.png": "/Memory-Card-Game/static/media/Dino.4c67f2f7.png",
     "static/media/Draftfish.png": "/Memory-Card-Game/static/media/Draftfish.25e7967e.png",
@@ -64,8 +64,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e2a5dfbd.js",
-    "static/js/2.59b376ee.chunk.js",
-    "static/css/main.20b449aa.chunk.css",
-    "static/js/main.f585fb86.chunk.js"
+    "static/js/2.1ca7d57e.chunk.js",
+    "static/css/main.b114c530.chunk.css",
+    "static/js/main.7ad4f086.chunk.js"
   ]
 }
