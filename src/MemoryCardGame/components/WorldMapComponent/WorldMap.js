@@ -98,14 +98,27 @@ const WorldMap = (props) => {
 
         stageThree = props.isStageTwoComplete && props.candidate ? < Link to="/StageThree" style={{textDecoration: 'none'}}>{stageThree} </Link> : <div className={classes.StageThree}></div>
         
+
         let overlay = <Overlay />
         let lossModal = null
-        if(!props.candidate && props.isStageTwoComplete && props.villsArray.length !== 0){
+        if(!props.candidate && props.isStageTwoComplete && props.villsArray.length !== 0 && props.villsArray.length !== 5){
             lossModal = <Link to='/StageTwo' > <LossModal /> </Link>
             props.turnOnOverlay();
+
         }
         if(props.candidate) {
             props.turnOffOverlay();
+        }
+        if(!props.candidate && props.villsArray.length === 5 && props.isStageTwoComplete) {
+            props.turnOffOverlay();
+            stageThree = <div className={classes.StageThree}>
+            <div className={classes.QuestionMark}>?
+            </div>
+            <div className={classes.StageTwoWords}>
+                            <p>Choose someone to lead from the village!</p>
+                        </div>
+                    
+                </div>
         }
 
         if(props.villsArray.length === 0) {

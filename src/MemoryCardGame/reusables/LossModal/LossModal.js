@@ -1,7 +1,10 @@
 import classes from './LossModal.module.css';
 import React from 'react';
 
-const LossModal = () => {
+const LossModal = (props) => {
+
+    
+
     return (<div className={classes.LossModalBody}>
         YOU LOSE
     </div>)
