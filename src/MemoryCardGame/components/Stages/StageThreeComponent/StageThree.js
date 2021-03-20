@@ -118,7 +118,15 @@ const StageThree = (props) => {
 
         
         
-
+        const killTheCandidate = () => {
+            if(!props.isStageThreeComplete){
+                props.removeCandidate();
+            }
+        }
+        let timer =<Timer TimerEnded={timerEnded} />
+        if(props.isStageThreeComplete){
+            timer = null
+        }
 
 
     return (
@@ -128,7 +136,7 @@ const StageThree = (props) => {
                 
                     <div className={classes.CandidateHolder}>
                         <Link to='/'>
-                            <img className={classes.CandidateHolder} src={sourceCandidate} alt='candidate'></img>
+                            <img onClick={killTheCandidate} className={classes.CandidateHolder} src={sourceCandidate} alt='candidate'></img>
                         </Link>
                     </div>
                 
@@ -139,8 +147,9 @@ const StageThree = (props) => {
                 
                 </div>
             {gameboard}
+            {timer}
             </div>
-            <Timer TimerEnded={timerEnded} />
+            
         </Fragment>
         )
 }

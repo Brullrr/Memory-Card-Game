@@ -91,7 +91,7 @@ const WorldMap = (props) => {
 
         let stageThree =    <div className={classes.StageThree}>
                         <div className={classes.FrogHolder}>
-                            <img className={classes.Frog} src={sourceCandidate} alt='Imp'></img>
+                            <img className={classes.Frog} src={ props.isStageThreeComplete ? Imp : sourceCandidate} alt='Imp'></img>
                         </div>
                                 {stageThreeWords}
                             </div>
@@ -121,11 +121,32 @@ const WorldMap = (props) => {
                 </div>
         }
 
+        
+
         if(props.villsArray.length === 0) {
             props.turnOnOverlay();
             lossModal = <GameLost />
             setTimeout(props.gameLostHandler, 5000)
         }
+
+        let stageFourWords = props.isStageFourComplete ? <div className={classes.StageTwoWords}>
+                                    <p>You defeated the sunset Dino!</p>
+                                </div> :
+                                <div className={classes.StageTwoWords}>
+                                    <p>Get in there and fight!</p>
+                                    <p>Try not to die</p>
+                                </div>
+
+                let stageFour =    <div className={classes.StageFour}>
+                                <div className={classes.FrogHolder}>
+                                    <img className={classes.Frog} src={sourceCandidate} alt='Imp'></img>
+                                </div>
+                                        {stageFourWords}
+                                    </div>
+
+                stageFour = props.isStageThreeComplete && props.candidate ? < Link to="/StageFour" style={{textDecoration: 'none'}}>{stageFour} </Link> : <div className={classes.StageFour}></div>
+        
+
         
 
 
@@ -136,12 +157,7 @@ const WorldMap = (props) => {
 
                 {stageTwo}
                 {stageThree}
-                
-
-                < Link to="/StageFour" style={{textDecoration: 'none'}}>
-                    <div className={classes.StageFour}><p>stuff</p>
-                    </div>
-                </Link>
+                {stageFour}
                 {lossModal}
                 {overlay}
             </div>
