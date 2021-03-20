@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4dfb7f1c6becd12c38211dc5a911ad4f",
+    "revision": "afcb7c31111e9186d8631371dc54b0d0",
     "url": "/Memory-Card-Game/index.html"
   },
   {
-    "revision": "b9fa345873b39701250f",
-    "url": "/Memory-Card-Game/static/css/main.b114c530.chunk.css"
+    "revision": "e847a42d0becbebee0ce",
+    "url": "/Memory-Card-Game/static/css/main.79c6f5ae.chunk.css"
   },
   {
-    "revision": "2e66682f54e0f04bb6ec",
-    "url": "/Memory-Card-Game/static/js/2.1ca7d57e.chunk.js"
+    "revision": "ee40bb7e9221ef78584b",
+    "url": "/Memory-Card-Game/static/js/2.74d4be3e.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Memory-Card-Game/static/js/2.1ca7d57e.chunk.js.LICENSE.txt"
+    "url": "/Memory-Card-Game/static/js/2.74d4be3e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b9fa345873b39701250f",
-    "url": "/Memory-Card-Game/static/js/main.7ad4f086.chunk.js"
+    "revision": "e847a42d0becbebee0ce",
+    "url": "/Memory-Card-Game/static/js/main.6adcaddc.chunk.js"
   },
   {
     "revision": "31b99750f4b93866250e",
