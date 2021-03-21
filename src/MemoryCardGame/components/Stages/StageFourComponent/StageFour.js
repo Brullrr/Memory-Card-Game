@@ -5,7 +5,15 @@ import { connect } from 'react-redux';
 
 
 const StageFour = (props) => {
-    return( <div className={classes.StageFourBody}>heyo</div>)
+    return( <div className={classes.StageFourBody}>
+        <p>a candidate</p>
+        <p> a game board?? or should i se a new type of game?</p>
+        <p>winning loss </p>
+        <p>words</p>
+        
+
+
+    </div>)
 }
 
 
