@@ -7,7 +7,6 @@ const initialState = {
 
 const instructionsReducer = (state = initialState, action) => {
     if(action.type === actionTypes.INCR_INSTRUCTIONS_NUMBER) {
-        console.log('REDCUER Instruction number Begin')
         
             return {
                 ...state,

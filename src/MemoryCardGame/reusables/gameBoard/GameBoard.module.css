@@ -62,6 +62,31 @@
     height: 100%;
     width: 100%;
 }
+.ImageMoving {
+    height: 100%;
+    width: 100%;
+    animation-iteration-count: infinite;
+}.ImageMoveUp {
+    height: 100%;
+    width: 100%;
+    animation-name: moveUp;
+    animation-iteration-count: infinite;
+}.ImageMoveDown {
+    height: 100%;
+    width: 100%;
+    animation-name: moveDown;
+    animation-iteration-count: infinite;
+}.ImageMoveRight {
+    height: 100%;
+    width: 100%;
+    animation-name: moveRight;
+    animation-iteration-count: infinite;
+}.ImageMoveLeft {
+    height: 100%;
+    width: 100%;
+    animation-name: moveLeft;
+    animation-iteration-count: infinite;
+}
 
 
 @keyframes shake {
@@ -79,6 +104,51 @@
     }
     80% {
         transform: translate(100px, 0);
+    }
+    100% {
+        transform: translate(0px, 0);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translate(0px, 0);
+    }
+    50% {
+        transform: translate(0px, -150px);
+    }
+    100% {
+        transform: translate(0px, 0);
+    }
+}
+@keyframes moveDown {
+    0% {
+        transform: translate(0px, 0);
+    }
+    50% {
+        transform: translate(0px, 150px);
+    }
+    100% {
+        transform: translate(0px, 0);
+    }
+}
+@keyframes moveRight {
+    0% {
+        transform: translate(0px, 0);
+    }
+    50% {
+        transform: translate(150px, 0);
+    }
+    100% {
+        transform: translate(0px, 0);
+    }
+}
+@keyframes moveLeft {
+    0% {
+        transform: translate(0px, 0);
+    }
+    50% {
+        transform: translate(-150px, 0);
     }
     100% {
         transform: translate(0px, 0);

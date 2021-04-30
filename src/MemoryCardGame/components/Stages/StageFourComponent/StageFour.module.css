@@ -7,3 +7,75 @@
     top: 0%;
     left: 0%;
 }
+.CandidateHolder {
+    display: inline-block;
+    width: 20vw;
+    height: 50vh;
+}
+
+.Candidate {
+    height: 100%;
+    width: 100%;
+}
+
+.SpeechBubble {
+    display: inline-block;
+    width: 70vw;
+    height: 25vh;
+    margin: 0px 0px 0px 0px;
+    vertical-align: top;
+    
+}
+
+.SpeechBubble p {
+    position: absolute;
+    left: 35%;
+    top: 3%;
+    font-size: 2.5vw;
+    text-align: center;
+    width: 35%;
+}
+.SpeechBubble img {
+    position: absolute;
+    top: 0%;
+    width: 60vw;
+    height: 25vh;
+    transform: scaleX(-1);
+}
+
+.Victory {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 60%;
+    background-color: rgba(204, 165, 37, 0.761);
+    text-align: center;
+    font-size: 50px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px 1px;
+    padding: 16px;
+    font-weight: 900;
+}
+
+.HeartsContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 5vw 5vw;
+    width: 10vw;
+    padding: 4px;
+    margin-left: 3%;
+}
+
+.Heart {
+    width: 100%;
+    height: 100%;
+} 
+
+.SunsetHolder {
+    position: fixed;
+    bottom: 5%;
+    right: 0%;
+    height: 50vh;
+    width: 40vw;
+    z-index: 0;
+}

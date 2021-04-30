@@ -12,6 +12,7 @@ import speechBubble from '../../../reusables/Images/SpeechBubble.png'
 import Gameboard from '../../../reusables/gameBoard/GameBoard';
 import shuffle from '../../../reusables/Shuffle/shuffle';
 import Timer from '../../../reusables/Timer/Timer';
+import Oracle from '../../../reusables/Images/StageThree/Oracle.PNG';
 
 //IMOS
 import ImoWhite from '../../../reusables/Images/StageThree/ImoWhite.png';
@@ -43,13 +44,45 @@ import { Fragment } from 'react';
 
 
 const StageThree = (props) => {
+    let timer = null
 
-    let cardsArray = [GoolWhite, GoolBlack, GoolDarkBlue, GoolDarkGreen, GoolDarkPurple, GoolLightGreen, GoolGrey,
+    
+    
+    const history = useHistory();
+
+    
+    
+    const timerEnded = () => {
+        history.push('/')
+        console.log("[StageThree.js] the current state timer seconds is at:  " + props.seconds)
+        props.removeCandidate();
+        props.resetTimer();
+        
+    }
+
+
+    let timerIsActive = props.timerStarted
+    if(!timerIsActive){
+        props.turnOnTimer();
+    }
+    if(timerIsActive) {
+        timer =<Timer TimerEnded={timerEnded} />
+    }
+
+    let cardsArray = props.currentCardLayout.length === 0 ? [GoolWhite, GoolBlack, GoolDarkBlue, GoolDarkGreen, GoolDarkPurple, GoolLightGreen, GoolGrey,
         GoolOrange, GoolLightPurple, GoolRed, GoolLightBlue, GoolYellow, ImoWhite, ImoBlack, ImoDarkBlue, ImoDarkGreen, ImoDarkPurple, ImoLightGreen, ImoGrey,
         ImoOrange, ImoLightPurple, ImoRed, ImoLightBlue, ImoYellow
-    ]
+    ] : props.currentCardLayout
 
-    cardsArray = shuffle(cardsArray)
+    const shuffleCardsAddLayoutToState = (ele) => {
+        cardsArray = shuffle(cardsArray)
+        props.shuffleCardsAddToState(cardsArray)
+        props.clickedOn(ele)
+    }
+    if(props.currentCardLayout.length === 0){
+        console.log('[StageThree.js]  IS the lenght getting here?' + props.currentCardLayout.length)
+        shuffleCardsAddLayoutToState();
+    }
 
     const lose = () => {
         props.clearClickedOn();
@@ -63,16 +96,14 @@ const StageThree = (props) => {
     const winCondition = () => {
         props.clearClickedOn();
         props.stageThreeComplete();
-        
+        props.resetTimer();
     }
 
     let addCardToState = (ele) => {
-        props.clickedOnArray.every((e) => e !== ele) ? props.clickedOnArray.length === cardsArray.length-1 ? winCondition() : props.clickedOn(ele) : lose();
-
+        props.clickedOnArray.every((e) => e !== ele) ? props.clickedOnArray.length === cardsArray.length-1 ? winCondition() : shuffleCardsAddLayoutToState(ele) : lose();
     }
     let stageThreeLost = props.isStageThreeLost ? true : false
 
-    console.log('[StageThree COMponent] is stage 3 lost:    ' + stageThreeLost)
     let gameboard = <Gameboard cards={cardsArray} Lost={stageThreeLost} stage='2' clicked={addCardToState} />
     if(props.isStageThreeComplete) {
         gameboard = <div className={classes.Victory}>Well done! <br /> The oracle has been defeated!</div>
@@ -109,23 +140,21 @@ const StageThree = (props) => {
                 attackPhrase = null
                 break;
         }
-        const history = useHistory();
-        const timerEnded = () => {
-            history.push('/')
-            console.log('TImer ended')
-            props.removeCandidate();
-        }
-
         
-        
-        const killTheCandidate = () => {
-            if(!props.isStageThreeComplete){
-                props.removeCandidate();
-            }
-        }
-        let timer =<Timer TimerEnded={timerEnded} />
+    
         if(props.isStageThreeComplete){
             timer = null
+        }
+
+        let oracle = <div className={classes.OracleHolder}>
+        <img src={Oracle} alt='oracle'></img>
+    </div>
+        let candidate = <img  className={classes.CandidateHolder} src={sourceCandidate} alt='candidate'></img>
+        if(props.isStageThreeComplete){
+            oracle = null
+            candidate = <Link to='/'>
+            <img  className={classes.CandidateHolder} src={sourceCandidate} alt='candidate'></img>
+            </Link>
         }
 
 
@@ -134,16 +163,16 @@ const StageThree = (props) => {
             <div className={classes.StageThreeBody}>
                 <div>
                 
-                    <div className={classes.CandidateHolder}>
-                        <Link to='/'>
-                            <img onClick={killTheCandidate} className={classes.CandidateHolder} src={sourceCandidate} alt='candidate'></img>
-                        </Link>
+                    <div className={classes.CandidateHolder} >
+                        {candidate}
                     </div>
                 
                     <div className={classes.SpeechBubble}>
                         <img src={ speechBubble} alt='speechbub'></img>
                         <p>{attackPhrase}</p>
                     </div>
+                    {oracle}
+                    
                 
                 </div>
             {gameboard}
@@ -159,7 +188,10 @@ const mapStateToProps = state => {
         isStageThreeComplete: state.stgthrrdcr.isStageThreeComplete,
         candidate: state.stgtwrdcr.candidate,
         isStageThreeLost: state.stgthrrdcr.stageThreeLost,
-        clickedOnArray: state.stgthrrdcr.clickedOn
+        clickedOnArray: state.stgthrrdcr.clickedOn,
+        seconds: state.tmrrdcr.timer,
+        timerStarted: state.tmrrdcr.timerStarted,
+        currentCardLayout: state.stgthrrdcr.currentCardLayout
     }
 }
 
@@ -170,7 +202,11 @@ const mapDispatchToProps = dispatch => {
         stageThreeComplete: () => dispatch({type: actionTypes.STAGE_THREE_COMPLETED}),
         stageThreeLost: () => dispatch({type: actionTypes.STAGE_THREE_LOST}),
         stageThreeLostRevert: () => dispatch({type: actionTypes.STAGE_THREE_REVERT_LOST}),
-        removeCandidate: () => dispatch({type: actionTypes.REMOVE_CANDIDATE})
+        removeCandidate: () => dispatch({type: actionTypes.REMOVE_CANDIDATE}),
+        turnOnTimer: () => dispatch({type: actionTypes.START_TIMER}),
+        turnOffTimer: () => dispatch({type: actionTypes.STOP_TIMER}),
+        resetTimer: () => dispatch({type: actionTypes.RESET_TIMER}),
+        shuffleCardsAddToState: (array) => dispatch({type: actionTypes.STAGE_THREE_SHUFFLE, value: array})
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(StageThree)

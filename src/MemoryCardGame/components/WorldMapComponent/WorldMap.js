@@ -1,6 +1,6 @@
 import classes from './WorldMap.module.css';
 import React, { Fragment} from 'react';
-import {  Link } from 'react-router-dom';
+import {  Link, useHistory } from 'react-router-dom';
 import frog from '../../reusables/Images/StageOne/Frog.png';
 import Imp from '../../reusables/Images/Imp.png';
 import Crit from '../../reusables/Images/StageTwo/Crit.PNG'
@@ -13,10 +13,10 @@ import LossModal from '../../reusables/LossModal/LossModal';
 import Overlay from '../../reusables/Overlay/Overlay';
 import * as actionTypes from '../../../store/actionTypes/actionTypes';
 import GameLost from '../GameLost/GameLost';
-
+import heart from '../../reusables/Images/DeerCongrats.png';
 
 const WorldMap = (props) => {
-
+    
 
         
 
@@ -86,12 +86,12 @@ const WorldMap = (props) => {
                         </div> :
                         <div className={classes.StageTwoWords}>
                             <p>The village is under attack!</p>
-                            <p>The battle must not last longer than 3 minutes!</p>
+                            <p>The battle must not last longer than 2 minutes!</p>
                          </div>
 
         let stageThree =    <div className={classes.StageThree}>
                         <div className={classes.FrogHolder}>
-                            <img className={classes.Frog} src={ props.isStageThreeComplete ? Imp : sourceCandidate} alt='Imp'></img>
+                            <img className={classes.Frog} src={ props.isStageThreeComplete ? heart : sourceCandidate} alt='Imp'></img>
                         </div>
                                 {stageThreeWords}
                             </div>
@@ -134,7 +134,7 @@ const WorldMap = (props) => {
                                 </div> :
                                 <div className={classes.StageTwoWords}>
                                     <p>Get in there and fight!</p>
-                                    <p>Try not to die</p>
+                                    <p>You have four attempts.</p>
                                 </div>
 
                 let stageFour =    <div className={classes.StageFour}>
@@ -172,7 +172,8 @@ const mapStateToProps = state => {
         isStageTwoComplete: state.stgtwrdcr.isStageTwoComplete,
         isStageThreeComplete: state.stgthrrdcr.isStageThreeComplete,
         candidate: state.stgtwrdcr.candidate,
-        villsArray: state.stgtwrdcr.vills
+        villsArray: state.stgtwrdcr.vills,
+        timerInitialized: state.tmrrdcr.timerInitialized
     }
 }
 

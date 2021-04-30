@@ -4,18 +4,29 @@ import { connect } from 'react-redux';
 import * as actionTypes from '../store/actionTypes/actionTypes';
 import FirstTime from './components/FirstTimeCompenent/FirstTime';
 import WorldMap from './components/WorldMapComponent/WorldMap';
-import { HashRouter, Route } from 'react-router-dom';
+import { HashRouter, Route, useHistory } from 'react-router-dom';
 import StageOne from './components/Stages/StageOneComponent/StageOne';
 import StageTwo from './components/Stages/StageTwoComponent/StageTwo';
 import StageThree from './components/Stages/StageThreeComponent/StageThree';
 import StageFour from './components/Stages/StageFourComponent/StageFour';
+import BackToBattle from './reusables/backToBattle/BackToBattle';
+import GameWon from '../MemoryCardGame/components/GameWon/GameWon';
  
 const MemoryCardGame = (props) => {
 
+    let history = useHistory();
     let overlay = null
     let firstTime = null
     let worldMap = <WorldMap />
-    
+    let stageOne = props.timerInitialized && !props.isStageThreeComplete ? <BackToBattle /> : <StageOne />
+    let stageTwo = props.timerInitialized && !props.isStageThreeComplete ? <BackToBattle /> : <StageTwo />
+    let stageThree = <StageThree />
+    let stageFour = props.timerInitialized && !props.isStageThreeComplete ? <BackToBattle /> : <StageFour />
+    if(!props.isStageOneComplete){
+        stageTwo = <div></div>
+        stageThree = <div></div>
+        stageFour = <div></div>
+    }
     if(props.isUserFirstVisit){
         overlay = <Overlay />
         firstTime = <FirstTime />
@@ -23,8 +34,28 @@ const MemoryCardGame = (props) => {
         setTimeout(() => {
             props.turnOffOverlay();
             props.turnOffFirstVisit();
-        }, 3000);
+        }, 28000);
     }
+
+    if(props.timerInitialized && !props.isStageThreeComplete) {
+        worldMap = <BackToBattle />
+    }
+
+    const restartGame = () => {
+        history.push('/')
+        props.restartGame();
+
+    }
+    
+
+    if(props.isStageFourComplete) {
+        stageOne = <GameWon clicked={restartGame} />
+        stageTwo = <GameWon clicked={restartGame} />
+        stageThree = <GameWon clicked={restartGame} />
+        stageFour = <GameWon clicked={restartGame} />
+        worldMap = <GameWon clicked={restartGame} />
+    }
+    
 
     return ( 
     <Fragment>
@@ -37,10 +68,10 @@ const MemoryCardGame = (props) => {
                 </div>)
             } } />
 
-            <Route path='/StageOne' exact render={ () => <StageOne />} />
-            <Route path='/StageTwo' exact render={ () => <StageTwo />} />
-            <Route path='/StageThree' exact render={ () => <StageThree />} />
-            <Route path='/StageFour' exact render={ () => <StageFour />} />
+            <Route path='/StageOne' exact render={ () => <div>{stageOne}</div>} />
+            <Route path='/StageTwo' exact render={ () => <div>{stageTwo}</div>} />
+            <Route path='/StageThree' exact render={ () => <div>{stageThree}</div>} />
+            <Route path='/StageFour' exact render={ () => <div>{stageFour}</div>} />
         </HashRouter>
     </Fragment> 
     )
@@ -50,14 +81,19 @@ const MemoryCardGame = (props) => {
 const mapDispatchToProps = dispatch => {
     return {
         turnOffOverlay: () => dispatch({type: actionTypes.TURN_OFF_OVERLAY}),
-        turnOffFirstVisit: () => dispatch({type: actionTypes.TURN_OFF_FIRST_VISIT})
+        turnOffFirstVisit: () => dispatch({type: actionTypes.TURN_OFF_FIRST_VISIT}),
+        restartGame: () => dispatch({type: actionTypes.GAME_LOST})
     }
 }
 
 const mapStateToProps = state => {
     return {
         isOverlayOn: state.vrlyrdcr.isOverlayOn,
-        isUserFirstVisit: state.frsttmvstrdcr.isUserFirstVisit
+        isUserFirstVisit: state.frsttmvstrdcr.isUserFirstVisit,
+        timerInitialized: state.tmrrdcr.timerInitialized,
+        isStageThreeComplete: state.stgthrrdcr.isStageThreeComplete,
+        isStageFourComplete: state.stgfrrdcr.isStageFourComplete,
+        isStageOneComplete: state.stgnrdcr.isStageOneComplete
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(MemoryCardGame);

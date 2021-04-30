@@ -14,6 +14,8 @@ import instructionsReducer from './store/reducers/instructionsReducer';
 import stageOneReducer from './store/reducers/stageOneReducer'
 import stageTwoReducer from './store/reducers/stageTwoReducer';
 import stageThreeReducer from './store/reducers/stageThreeReducer';
+import timerReducer from './store/reducers/timerReducer';
+import stageFourReducer from './store/reducers/stageFourReducer';
 
 
 const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : {}
@@ -25,7 +27,9 @@ const appReducer = combineReducers(
     nstrctnsrdcr: instructionsReducer,
     stgnrdcr: stageOneReducer,
     stgtwrdcr: stageTwoReducer,
-    stgthrrdcr: stageThreeReducer
+    stgthrrdcr: stageThreeReducer,
+    tmrrdcr: timerReducer,
+    stgfrrdcr: stageFourReducer
   }
 )
 const rootReducer = (state, action) => {

@@ -1,0 +1,40 @@
+.GameWon {
+    position: absolute;
+    z-index: 11;
+    background-color: lightgreen;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+
+
+
+.SunsetDino {
+    height: 50vh;
+    width: 30vw;
+    cursor: pointer;
+    
+}
+
+.DinoHolder {
+    display: grid;
+    grid-template-columns: 20%;
+    margin-left: 3%;
+    
+
+}
+
+.Victory {
+    width: 20%;
+    font-size: 30vh;
+    position: fixed;
+    left: 40%;
+    color: rgb(100, 88, 19);
+}
+
+.PlayAgain {
+    font-size: 5vh;
+    height: 50vh;
+    width: 30vw;
+}

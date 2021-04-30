@@ -4,7 +4,8 @@ import * as actionTypes from '../actionTypes/actionTypes';
 const initialState = {
     isStageThreeComplete: false,
     clickedOn: [],
-    stageThreeLost: false
+    stageThreeLost: false,
+    currentCardLayout: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -35,7 +36,12 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 stageThreeLost: false
             }
-    
+        case actionTypes.STAGE_THREE_SHUFFLE : 
+        return {
+            ...state,
+            currentCardLayout: action.value
+        }
+  
         default:
             break;
     }

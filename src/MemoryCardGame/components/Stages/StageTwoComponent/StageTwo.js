@@ -14,7 +14,6 @@ import * as actionTypes from '../../../../store/actionTypes/actionTypes';
 const StageTwo = (props) => {
 
     
-    console.log('vilager array:   ' + props.vills)
 
     let vills = [...props.vills];
 
@@ -46,8 +45,8 @@ const StageTwo = (props) => {
 
         let border = props.candidate === element.name ?  '2px solid green' :  null
         return (
-            <div className={classes.VillagerHolder}>
-                <img className={classes.Vill} src={sourceVill} alt={element.name} onClick={() => {props.becomeCandidate(element.name)}}  style={{
+            <div key={sourceVill} className={classes.VillagerHolder}>
+                <img  className={classes.Vill} src={sourceVill} alt={element.name} onClick={() => {props.becomeCandidate(element.name)}}  style={{
                     border: border
                 }} />
                 <p className={classes.Description}>{element.description}</p>

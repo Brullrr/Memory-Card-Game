@@ -1,14 +1,14 @@
 .LossModalBody {
     position: absolute;
     top: 10%;
-    left: 15%;
+    left: 30%;
     height: 40%;
-    width: 70%;
+    width: 40%;
     background-color: aliceblue;
     border: 3px solid blue;
     border-radius: 16px;
-    padding: 20% 0px 0px 0px;
-    font-size: 50px;
+    padding: 5% 0px 0% 0px;
+    font-size: 4vh;
     text-align: center;
     box-shadow: 1px 5px 5px 10px;
     z-index: 11;
