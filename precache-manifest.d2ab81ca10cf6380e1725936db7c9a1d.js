@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "afcb7c31111e9186d8631371dc54b0d0",
+    "revision": "6db5e400fa2a9628fed481feeb910a03",
     "url": "/Memory-Card-Game/index.html"
   },
   {
-    "revision": "e847a42d0becbebee0ce",
-    "url": "/Memory-Card-Game/static/css/main.79c6f5ae.chunk.css"
+    "revision": "8f0fddab9a8f2a14a384",
+    "url": "/Memory-Card-Game/static/css/main.38c932d5.chunk.css"
   },
   {
-    "revision": "ee40bb7e9221ef78584b",
-    "url": "/Memory-Card-Game/static/js/2.74d4be3e.chunk.js"
+    "revision": "cea338c031bd59183d3a",
+    "url": "/Memory-Card-Game/static/js/2.8ba99bd2.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Memory-Card-Game/static/js/2.74d4be3e.chunk.js.LICENSE.txt"
+    "url": "/Memory-Card-Game/static/js/2.8ba99bd2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e847a42d0becbebee0ce",
-    "url": "/Memory-Card-Game/static/js/main.6adcaddc.chunk.js"
+    "revision": "8f0fddab9a8f2a14a384",
+    "url": "/Memory-Card-Game/static/js/main.0981ed1b.chunk.js"
   },
   {
     "revision": "31b99750f4b93866250e",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8665bc45b66d395e5e6b43a518262ef9",
     "url": "/Memory-Card-Game/static/media/Crit.8665bc45.PNG"
+  },
+  {
+    "revision": "9baac31c7e099afddd9dfcd13c736592",
+    "url": "/Memory-Card-Game/static/media/DeerCongrats.9baac31c.png"
   },
   {
     "revision": "4c67f2f7e39bb03ea041b10c61c248c0",
@@ -136,6 +140,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Memory-Card-Game/static/media/Goose.abc36a7d.png"
   },
   {
+    "revision": "8ef7823a6c67ad8ca6b696d8b0541fbd",
+    "url": "/Memory-Card-Game/static/media/Heart.8ef7823a.png"
+  },
+  {
     "revision": "c6b5e573046f6ce3bda6bb39a2784328",
     "url": "/Memory-Card-Game/static/media/ImoBlack.c6b5e573.png"
   },
@@ -188,6 +196,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Memory-Card-Game/static/media/Imp.c33eec6e.png"
   },
   {
+    "revision": "ef7f40cf660ca1f184812b9f15e7143e",
+    "url": "/Memory-Card-Game/static/media/Oracle.ef7f40cf.PNG"
+  },
+  {
     "revision": "3aa7a9b1a86002241bd35501368e1919",
     "url": "/Memory-Card-Game/static/media/Racoon.3aa7a9b1.png"
   },
@@ -218,5 +230,53 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4831aaf8190958b0d8c9f7c6bf0dab89",
     "url": "/Memory-Card-Game/static/media/SunsetDino.4831aaf8.png"
+  },
+  {
+    "revision": "09f6ea5631d089d670d3949cf5927cfa",
+    "url": "/Memory-Card-Game/static/media/deerBlack.09f6ea56.png"
+  },
+  {
+    "revision": "812676f48ccd685e9efc257e687c5168",
+    "url": "/Memory-Card-Game/static/media/deerDarkBlue.812676f4.png"
+  },
+  {
+    "revision": "5f0f32788a064e816ff1becb5cd4b1bf",
+    "url": "/Memory-Card-Game/static/media/deerDarkGreen.5f0f3278.png"
+  },
+  {
+    "revision": "52320255ef16c02bdd20c78c7a068b8c",
+    "url": "/Memory-Card-Game/static/media/deerGrey.52320255.png"
+  },
+  {
+    "revision": "81e2cc242bd1b2fa0a8346454e291c87",
+    "url": "/Memory-Card-Game/static/media/deerLightBlue.81e2cc24.png"
+  },
+  {
+    "revision": "cfaf462cf2911706dda68afe03b98808",
+    "url": "/Memory-Card-Game/static/media/deerLightGreen.cfaf462c.png"
+  },
+  {
+    "revision": "63faf8c044946385dd65eebb8986fbb2",
+    "url": "/Memory-Card-Game/static/media/deerOrange.63faf8c0.png"
+  },
+  {
+    "revision": "70646c65447ee0978ac8a6b3eace97ca",
+    "url": "/Memory-Card-Game/static/media/deerPink.70646c65.png"
+  },
+  {
+    "revision": "d2875198bd36e9835e102445e5629422",
+    "url": "/Memory-Card-Game/static/media/deerPurple.d2875198.png"
+  },
+  {
+    "revision": "78591030596d708e9fea7ee5eeeebfb9",
+    "url": "/Memory-Card-Game/static/media/deerRed.78591030.png"
+  },
+  {
+    "revision": "9b091d1533c909e17ae920e3f1c09504",
+    "url": "/Memory-Card-Game/static/media/deerWhite.9b091d15.png"
+  },
+  {
+    "revision": "19af81e06d4d29445d44fdd0cb12d028",
+    "url": "/Memory-Card-Game/static/media/deerYellow.19af81e0.png"
   }
 ]);
