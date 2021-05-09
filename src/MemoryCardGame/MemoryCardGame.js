@@ -18,10 +18,10 @@ const MemoryCardGame = (props) => {
     let overlay = null
     let firstTime = null
     let worldMap = <WorldMap />
-    let stageOne = props.timerInitialized && !props.isStageThreeComplete ? <BackToBattle /> : <StageOne />
-    let stageTwo = props.timerInitialized && !props.isStageThreeComplete ? <BackToBattle /> : <StageTwo />
+    let stageOne = props.timerInitialized && !props.isStageThreeComplete && !props.candidate ? <BackToBattle /> : <StageOne />
+    let stageTwo =  <StageTwo />
     let stageThree = <StageThree />
-    let stageFour = props.timerInitialized && !props.isStageThreeComplete ? <BackToBattle /> : <StageFour />
+    let stageFour = props.timerInitialized && !props.isStageThreeComplete && !props.candidate ? <BackToBattle /> : <StageFour />
     if(!props.isStageOneComplete){
         stageTwo = <div></div>
         stageThree = <div></div>
@@ -37,7 +37,7 @@ const MemoryCardGame = (props) => {
         }, 28000);
     }
 
-    if(props.timerInitialized && !props.isStageThreeComplete) {
+    if(props.timerInitialized && !props.isStageThreeComplete && !props.candidate) {
         worldMap = <BackToBattle />
     }
 
@@ -93,7 +93,8 @@ const mapStateToProps = state => {
         timerInitialized: state.tmrrdcr.timerInitialized,
         isStageThreeComplete: state.stgthrrdcr.isStageThreeComplete,
         isStageFourComplete: state.stgfrrdcr.isStageFourComplete,
-        isStageOneComplete: state.stgnrdcr.isStageOneComplete
+        isStageOneComplete: state.stgnrdcr.isStageOneComplete,
+        candidate: state.stgtwrdcr.candidate
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(MemoryCardGame);

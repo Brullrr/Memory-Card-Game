@@ -54,7 +54,6 @@ const StageThree = (props) => {
     
     const timerEnded = () => {
         history.push('/')
-        console.log("[StageThree.js] the current state timer seconds is at:  " + props.seconds)
         props.removeCandidate();
         props.resetTimer();
         
@@ -80,7 +79,6 @@ const StageThree = (props) => {
         props.clickedOn(ele)
     }
     if(props.currentCardLayout.length === 0){
-        console.log('[StageThree.js]  IS the lenght getting here?' + props.currentCardLayout.length)
         shuffleCardsAddLayoutToState();
     }
 

@@ -102,12 +102,11 @@ const StageFour = (props) => {
         if(props.isStageFourComplete) {
             gameboard = <div className={classes.Victory}>Well done! <br /> Sunset has been defeated!</div>
         }
-        console.log('[StageFour.js ] hearts left ' + props.hearts)
 
         let howManyHearts = []
         
         for(let i=0; i<props.hearts; i++) {
-            howManyHearts.push(<img src={heart} className={classes.Heart} key={i} />)
+            howManyHearts.push(<img src={heart} className={classes.Heart} key={i} alt={i}/>)
         }
 
         let sunset = <div className={classes.SunsetHolder}>

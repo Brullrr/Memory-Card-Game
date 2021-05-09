@@ -1,12 +1,10 @@
 import React from 'react';
 import Imp from '../../reusables/Images/Imp.png';
-import {Link, useHistory} from 'react-router-dom';
 import classes from './BackToBattle.module.css';
+import { Link } from 'react-router-dom';
 
 const BackToBattle = () => {
-    const history = useHistory();
-    
-    history.push('/StageThree')
+   
     
 
     return (
@@ -15,7 +13,7 @@ const BackToBattle = () => {
                 <img src={Imp} alt='Another Imp'/>
             </div>
             
-            <Link to='/StageThree'><p>Back to the battle!</p></Link>
+            <Link to='/StageTwo'> <p>Go back to the battle!</p> </Link>
             
         </div>
     )

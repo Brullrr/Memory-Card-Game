@@ -1,6 +1,6 @@
 import classes from './WorldMap.module.css';
 import React, { Fragment} from 'react';
-import {  Link, useHistory } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import frog from '../../reusables/Images/StageOne/Frog.png';
 import Imp from '../../reusables/Images/Imp.png';
 import Crit from '../../reusables/Images/StageTwo/Crit.PNG'

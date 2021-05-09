@@ -18,7 +18,6 @@ const FirstTime = (props) => {
 
 
     if(props.instructionsNum === 0) {
-        console.log("Test is running")
         let loopInstructions = setInterval( () => { props.incrementInstructionNumber() },3550)
 
         setTimeout(()=> {
